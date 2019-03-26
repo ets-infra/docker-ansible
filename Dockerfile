@@ -2,7 +2,10 @@ FROM williamyeh/ansible:ubuntu16.04
 
 MAINTAINER Eric Gazoni <eric@adimian.com>
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install git-core python3-pip -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+    && apt-get install git-core python3-pip -y
+    
+RUN pip install "ansible>=2.7.9" "ansible_vault>=1.2.0" "boto>=2.49.0"
 
 # default command: display Ansible version
 CMD [ "ansible-playbook", "--version" ]
