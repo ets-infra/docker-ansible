@@ -4,7 +4,7 @@ MAINTAINER Eric Gazoni <eric@adimian.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && apt remove python -y \
-    && apt-get install git-core python3-pip python3-psycopg2 jq curl -y \
+    && apt-get install git-core python3-pip python3-psycopg2 jq curl postgresql -y \
     && apt autoremove -y \
     && ln -fs /usr/bin/pip3 /usr/bin/pip \
     && ln -fs /usr/bin/python3 /usr/bin/python
