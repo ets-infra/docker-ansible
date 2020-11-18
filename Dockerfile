@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && ln -fs /usr/bin/python3 /usr/bin/python
     
 
-RUN pip3 install "ansible>=2.7.9" "ansible_vault>=1.2.0" "boto>=2.49.0" "boto3==1.16.19" "botocore==1.19.19" "awscli==1.18.179" "influxdb==5.0.0"
+RUN pip3 install "ansible>=2.7.9" "ansible_vault>=1.2.0" "boto>=2.49.0" "boto3==1.16.19" "botocore==1.19.19" "awscli==1.18.179" "influxdb==5.3.1"
 RUN ansible-galaxy collection install community.general
 
 # default command: display Ansible version
