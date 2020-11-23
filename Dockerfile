@@ -12,6 +12,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 RUN pip3 install "ansible>=2.7.9" "ansible_vault>=1.2.0" "boto>=2.49.0" "boto3==1.16.19" "botocore==1.19.19" "awscli==1.18.179" "influxdb==5.3.1"
 RUN ansible-galaxy collection install community.general
+RUN ansible-galaxy collection install ansible.posix
 
 # default command: display Ansible version
 CMD [ "ansible-playbook", "--version" ]
